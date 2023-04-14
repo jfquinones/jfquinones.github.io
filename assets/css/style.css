@@ -19,7 +19,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--contrast-font);
-  position: relative;
+  position: absolut;
+  display: "flex"
   background: transparent;
 }
 
