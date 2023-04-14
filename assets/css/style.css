@@ -20,7 +20,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--contrast-font);
   position: absolut;
-  display: "flex"
+  display: "flex";
   background: transparent;
 }
 
