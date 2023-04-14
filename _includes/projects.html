@@ -1,0 +1,52 @@
+  <!-- Start Project Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      
+      <div class="section-title">
+        <h2>{{ site.data.t.pages.projects[page.lang] }}</h2>
+      </div>
+      <!-- Start Filters Section -->
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-filters">
+            
+            {% for filter in site.data.t.projects.filters %}
+              {% if filter.data-filter ==  site.data.t.projects.initial-filter %}
+                <li data-filter="{{ filter.data-filter }}" class="filter-active">{{ filter.text[page.lang]}}</li>
+              {% else %}
+                <li data-filter="{{ filter.data-filter }}">{{ filter.text[page.lang]}}</li>  
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div> <!-- End Filter Section -->
+
+      <div class="row portfolio-container">
+        
+        {% for project in site.data.t.projects.list %}
+        <div class="col-12 col-lg-4 portfolio-item {{ project.filters }}">
+          
+          <div class="container">
+            
+            
+          <center><h4>{{ project.title[page.lang] }}</h4></center>
+          <div class="portfolio-wrap">
+            <p>{{ project.description[page.lang] }}</p>
+            <!-- <img src="../assets/img/project/twitteranalysis.jpg" class="img-fluid" alt=""> -->
+          </div> 
+          
+          <div class="portfolio-info">
+            <div class="portfolio-links">
+                <a href="/{{page.lang}}/{{project.url}}.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class='bx bx-link bx-tada bx-rotate-90' ></i></a>
+            </div>
+          </div> 
+
+          </div>  
+        </div> 
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- End Project Section -->

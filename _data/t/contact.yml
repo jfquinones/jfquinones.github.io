@@ -1,0 +1,27 @@
+social-profiles:
+  en: Social Profiles
+  es: Redes Sociales
+your-name:
+  en: Your name
+  es: Tu numbre
+your-email:
+  en: Your Email
+  es: Tu Email
+subject:
+  en: Subject
+  es: Asunto
+message:
+  en: Message
+  es: Mensaje
+loading:
+  en: Loading
+  es: Enviando
+error-message:
+  en: An error ocurred while sending message
+  es: Un error ocurrio al enviar el mensaje
+sent-message:
+  en: You message has bent sent. Thank you!
+  es: Tu mensaje ha sido enviado. Gracias
+submit:
+  en: Send
+  es: Enviar

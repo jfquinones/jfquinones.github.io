@@ -1,0 +1,50 @@
+# About me translations
+description:
+  en: I am a mechanical engineer passionate about using new technologies, both hardware and software,
+      to create tools to solve problems as they arise. I like to be self-taught and read a lot to keep myself up-to-date.
+      I love to work in teams, learn, share, and teach what I have learned
+  es: Soy un ingeniero mecánico apasionado por utilizar las nuevas tecnologias, tanto Hardware como Software, para 
+      crear herramientas para solucionar los problemas que se presenten. Me gusta ser autodidacta y leer mucho para mantenerme actualizado.
+      Me encanta trabajar en equipo, poder aprender, compartir y enseñar lo que he aprendido.
+birthday:
+  en: Birthday
+  es: Fecha de Nacimiento
+age:
+  en: Age
+  es: Edad
+phone:
+  en: Phone
+  es: Teléfono
+city:
+  en: City
+  es: Ciudad
+email:
+  en: Email
+  es: Email
+
+
+interests:
+  en: Interests
+  es: Interesado en
+  
+  list:
+    - text:
+        en: Software Development
+        es: Desarrollo de Software
+      icon: ri-global-line
+    - text:
+        en: Machine Learning
+        es: Aprendizaje Automatico
+      icon: ri-database-2-line
+    - text:
+        en: Algorithms
+        es: Algoritmos
+      icon: ri-file-list-3-line
+    - text:
+        en: Industrial Automation
+        es: Automatizacion Industrial
+      icon: ri-database-2-line
+    - text:
+        en: Materials
+        es: Materiales
+      icon: ri-database-2-line

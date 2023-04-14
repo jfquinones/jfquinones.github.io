@@ -1,0 +1,85 @@
+initial-filter: "*"
+filters:
+  - data-filter: "all"
+    text:
+      en: All
+      es: Todos
+  - data-filter: "mechanical-engineering"
+    text:
+      en: Mechanical Engineering
+      es: Ingenieria Mecanica
+  - data-filter: "automation"
+    text:
+      en: Automation
+      es: Automatizacion
+  - data-filter: "software"
+    text:
+      en: Software
+      es: Software
+
+list:
+  - title:
+      en: Modeling of Allotropic Transformations in SAE 4140 Steel
+      es: Modelado de Transformaciones Alotropicas en Acero SAE 4140
+    description:
+      en: Modeling of Allotropic Transformations to Obtain the Hardness of a 
+        Piece as a Function of its Cooling Rate, using Finite Element Technique
+        through Abaqus Software
+      es: Modelado de Transformaciones Alotropicas para Obtener la Dureza de una
+        Pieza en Funcion de su Velocidad de Enfriamiento, usando la tecnica 
+        elemento finitos mediante Abaqus software
+    url: allotropic-transformation
+    filters: software mechanical-engineering
+
+  - title:
+      en: Automation System for Tensile Testing Machine
+      es: Automatismo para Maquina de Ensayos de Tracción
+    description:
+      en: Creation of a UI and backend software using Processing (Java),
+        and the electronics were designed using a Raspberry Pi 3 and an Arduino.
+      es: Creacion de un software para Interfaz de usuario usando Proccesing (Java), 
+        y se diseño la electrónica usando un Rasppery Pi 3 y un Arduino
+    url: tensile-testing-machine
+    filters: automation software
+
+  - title:
+      en: Pelletizer Design
+      es: Diseño de Peletizadora
+    description:
+      en: Detail Design of Pelletizer, including review of existing prototypes, 
+        modeling of a new machine, and analysis of dynamic stresses.
+      es: Diseño de Detalle de Peletizadora, incluyendo revision de prototipos existentes,
+        modelado de una nueva maquina y analisis de esfuerzos dinamicos.
+    url: pelletizer
+    filters: mechanical-engineering
+
+  - title:
+      en: Calcium Carbide Plant Automation
+      es: Automatizacion de Planta de Carburo de Calcio
+    description:
+      en: Design and Programming of PLC and SCADA, Supervision of Wiring and Commissioning
+      es: Diseño y Programacion de PLC y SCADA, Supervision de Conexionado y Puesta en Marcha
+    url: calcium-carbide-plant-auto
+    filters: automation
+
+  - title:
+      en: Computerized Maintenance Management System (CMMS)
+      es: Sistema Computarizado de Gestión de Mantenimiento (CMMS)
+    description:
+      en: Development and Commissioning of CMMS using Django framework, to generate work orders, and keep track of inventory.
+      es: Desarrollo y Puesta en Marcha de CMMS usando el framework Django, para generar ordenes de trabajo, y llevar control de stock
+    url: cmms
+    filters: software
+
+  - title:
+      en: Customizable and Multilanguage Portfolio
+      es: Portfolio personalizable y multilenguaje
+    description:
+      en: Development of a Multilanguage, Modularized, and Easily Customizable Portfolio, using Jekyll.
+      es: Desarrollo de un Portfolio Multilanguage, modularizado y facilmente personalizable, utilizando Jekyll.
+    url: portfolio
+    filters: software
+
+  
+
+  

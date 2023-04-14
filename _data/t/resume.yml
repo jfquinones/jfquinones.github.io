@@ -1,0 +1,69 @@
+sumary:
+  title:
+    en: Sumary
+    es: Resumen
+  items:
+    -title:
+      en: Facundo Quiñones
+      es: Facundo Quiñones
+    period: ""
+    place: 
+      en: ""
+      es: ""
+    description: 
+      en: hi I'm Facundo
+      es: hola soy Facundo
+
+education:
+  title:
+    en: Education
+    es: Educación
+  items:
+    - title:
+        en: 1st Education
+        es: 1era Educacion
+      period: 2004-2008
+      place: 
+        en: San
+        es: San
+      description: 
+        en: 1st Education description
+        es: 1era Educacion descripcion
+    - title:
+        en: 2nd Education
+        es: 2da Educacion
+      period: 2004-2008
+      place: 
+        en: San Juan
+        es: San Juan
+      description: 
+        en: 2nd Education description
+        es: 2da Educacion descripcion
+
+experience:
+  title:
+    en: Experience
+    es: Experiencia
+  items:
+    - title:
+        en: 1st Experience
+        es: 1ra Experiencia
+      period: 2004-2008
+      place: 
+        en: San
+        es: San
+      description:
+        en: 1st Work description
+        es: 1er Trabajo descripcion
+    - title:
+        en: 2nd Experience
+        es: 2da Experiencia
+      period: 2004-2008
+      place: 
+        en: San Juan
+        es: San Juan
+      description:
+        en: 2nd Work description
+        es: 2do Trabajo descripcion
+
+   

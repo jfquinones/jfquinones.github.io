@@ -1,0 +1,60 @@
+
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>{{ site.data.t.pages.about[page.lang] }}</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="../assets/img/profile.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <p>{{ site.data.t.about.description[page.lang] }}</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ site.author.age }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.phone[page.lang] }}: </strong>{{ site.author.phone }}</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.city[page.lang] }}: </strong> {{site.author.city }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.email[page.lang] }}: </strong>{{ site.author.email }}</li>
+              </ul>
+            </div>
+                <!-- ======= Interests ======= -->
+            <div class="interests container">
+
+              <div class="section-title">
+                <h2>{{ site.data.t.about.interests[page.lang] }}</h2>
+              </div>
+
+              <div class="row">
+                
+                {% for interest in site.data.t.about.interests.list %}
+                <div class="col-lg-4 col-md-4 mt-4">
+                  <div class="icon-box">
+                    <i class="interest-icon {{ interest.icon }}"></i>
+                    <h3>{{ interest.text[page.lang] }}</h3>
+                  </div>
+                </div>  
+                {% endfor %}
+
+            </div>
+          </div><!-- End Interests -->
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+
+  </section><!-- End About Section -->
+

@@ -1,0 +1,236 @@
+
+<style>
+:root {
+  --background: #010E1B;
+  --highlight:#457B9D;
+  --highlight-light: #A8DADC;
+  --contrast-font: #FFF ;
+  --inactive-font: #DEE2E6;
+  --underline: #24ff07;
+}
+
+.resume.container{
+  background: var(--background);
+  padding: 30px;
+}
+.about-me .img-fluid{
+  border-radius: 20%;
+}
+
+.about-me .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--highlight-light);
+}
+
+.about-me .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me .content ul li {
+  padding-bottom: 10px;
+}
+
+.about-me .content ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: var(--highlight-light);
+}
+
+.about-me .content p:last-child {
+  margin-bottom: 0;
+}
+
+.interests.container{
+  margin-top: 20px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 30px 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--inactive-font);
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::before {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--inactive-font);
+  margin: 4px 10px;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--inactive-font);
+  margin: 4px 10px;
+}
+
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--contrast-font);
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: var(--highlight-light);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--highlight-light);
+  border: 2px solid var(--highlight-light);
+}
+</style>
+   
+
+    <div id="downloadable-resume-container" class="resume container">
+      
+      <!-- About me -->
+      <div class="section-title">
+        <center><h2>{{ site.data.t.pages.about[page.lang] }}</h2></center>
+      </div>
+
+      <div class="row about-me">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="../assets/img/profile.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <p>{{ site.data.t.about.description[page.lang] }}</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ site.author.age }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.phone[page.lang] }}: </strong>{{ site.author.phone }}</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.city[page.lang] }}: </strong> {{site.author.city }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.email[page.lang] }}: </strong>{{ site.author.email }}</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- End About me -->
+
+      <!-- ======= Interests ======= -->
+      <div class="interests container">
+
+      <div class="section-title">
+        <center><h2>{{ site.data.t.about.interests[page.lang] }}</h2></center>
+      </div>
+
+      <div class="row">
+        
+        {% for interest in site.data.t.about.interests.list %}
+        <div class="col-lg-4 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="interest-icon {{ interest.icon }}"></i>
+            <h3>{{ interest.text[page.lang] }}</h3>
+          </div>
+        </div>  
+        {% endfor %}
+    </div>
+
+  </div><!-- End Interests -->
+
+      <!-- Resume -->
+      <div class="section-title">
+        <center><h2>{{ site.data.t.pages.resume[page.lang] }}</h2></center>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">{{ site.data.t.resume.sumary.title[page.lang] }}</h3>
+          <div class="resume-item pb-0">
+            <h4>{{site.author.name}}</h4>
+            <p><em>{{ site.data.t.resume.sumary.items[0].description[page.lang] }}</em></p>
+            <p>
+            <ul>
+              <li>{{site.author.city}}</li>
+              <li>{{site.author.phone}}</li>
+              <li>{{site.author.email}}</li>
+            </ul>
+            </p>
+          </div>
+          <!-- Education section -->
+          <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.items }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
+          {% for item in site.data.t.resume.education.items %}
+          <div class="resume-item" item='{{ item }}'>
+            <h4>{{ item.title[page.lang] }}</h4>
+            <h5>{{ item.period }}</h5>
+            <p><em>{{ item.place[page.lang] }}</em></p>
+            <p>{{ item.description[page.lang] }}</p>
+          </div>
+          {% endfor %}
+        </div>
+          <!-- Experience section -->
+        <div class="col-lg-6">
+          <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.items }}'>{{ site.data.t.resume.experience.title[page.lang] }}</h3>
+          {% for item in site.data.t.resume.experience.items %}
+          <div class="resume-item" item='{{ item }}'>
+            <h4>{{ item.title[page.lang] }}</h4>
+            <h5>{{ item.period }}</h5>
+            <p><em>{{ item.place[page.lang] }}</em></p>
+            <p>{{ item.description[page.lang] }}</p>
+          </div>
+          {% endfor %}
+          
+        </div>
+      
+      </div>
+    </div><!-- End Resume -->
+

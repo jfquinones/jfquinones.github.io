@@ -1,0 +1,51 @@
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>{{ site.data.t.pages.resume[page.lang] }}</h2>
+        <button class="btn btn-primary download-resume" url='/{{ page.lang }}/downloadable-resume.html' style="right:0">{{ site.data.t.pages.download-resume[page.lang] }}</button>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">{{ site.data.t.resume.sumary.title[page.lang] }}</h3>
+          <div class="resume-item pb-0">
+            <h4>{{site.author.name}}</h4>
+            <p><em>{{ site.data.t.resume.sumary.items[0].description[page.lang] }}</em></p>
+            <p>
+            <ul>
+              <li>{{site.author.city}}</li>
+              <li>{{site.author.phone}}</li>
+              <li>{{site.author.email}}</li>
+            </ul>
+            </p>
+          </div>
+          <!-- Education section -->
+          <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.items }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
+          {% for item in site.data.t.resume.education.items %}
+          <div class="resume-item" item='{{ item }}'>
+            <h4>{{ item.title[page.lang] }}</h4>
+            <h5>{{ item.period }}</h5>
+            <p><em>{{ item.place[page.lang] }}</em></p>
+            <p>{{ item.description[page.lang] }}</p>
+          </div>
+          {% endfor %}
+        </div>
+          <!-- Experience section -->
+        <div class="col-lg-6">
+          <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.items }}'>{{ site.data.t.resume.experience.title[page.lang] }}</h3>
+          {% for item in site.data.t.resume.experience.items %}
+          <div class="resume-item" item='{{ item }}'>
+            <h4>{{ item.title[page.lang] }}</h4>
+            <h5>{{ item.period }}</h5>
+            <p><em>{{ item.place[page.lang] }}</em></p>
+            <p>{{ item.description[page.lang] }}</p>
+          </div>
+          {% endfor %}
+          
+        </div>
+      
+      </div>
+    </div>
+  </section><!-- End Resume Section -->

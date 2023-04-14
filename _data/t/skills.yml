@@ -1,0 +1,81 @@
+categories:
+
+  - title:
+      en: Professional Skills
+      es: Habilidades Profesionales 
+    skills:
+      - en: Mechanical Engineering
+        es: Ingeniería Mecánica
+        icon: ""
+      - en: Software Development
+        es: Desarrollo de Software
+        icon: ""
+      - en: Complex Problem Solving
+        es: Resolución de Problemas Complejos
+        icon: ""
+      - en: Ability to Work in a Team
+        es: Habilidad para trabajar en Grupo
+        icon: ""
+      - en: Stress management
+        es: Trabajar bajo Presión
+        icon: ""
+      
+  - title:
+      en: Personal Skills
+      es: Habilidades Personales
+    skills:
+      - en: Motivated
+        es: Motivado
+        icon: ""
+      - en: Responsible
+        es: Responsable
+        icon: ""
+      - en: Fast Learner
+        es: Rápido Aprendizaje
+        icon: ""
+      - en: Creativity
+        es: Creatividad
+        icon: ""
+      - en: Proactiveness
+        es: Proactividad
+        icon: ""
+      - en: Adaptability
+        es: Adaptabilidad
+        icon: ""
+
+  - title:
+      en: Languages and Tools
+      es: Lenguajes y Herramientas
+    skills:
+      - en: Advanced English
+        es: Ingles Avanzado
+        icon: "fi fi-us"
+      - en: Native Spanish
+        es: Español Nativo
+        icon: "fi fi-es"
+      - en: Python
+        es: Python
+        icon: "bx bxl-python"
+      - en: Django
+        es: Django
+        icon: "bx bxl-django"
+      - en: Flask
+        es: Flask
+        icon: "bx bxl-flask"
+      - en: HTML
+        es: HTML
+        icon: "bx bxl-html5"
+      - en: CSS
+        es: CSS
+        icon: "bx bxl-css3"
+      - en: Javascript
+        es: Javascript
+        icon: "bx bxl-javascript"
+      - en: Autocad
+        es: Autocad
+        icon: ""
+      - en: Solidworks
+        es: Solidworks
+        icon: ""
+      
+      

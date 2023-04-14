@@ -1,0 +1,86 @@
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>{{ site.data.t.pages.contact[page.lang] }}</h2>
+    </div>
+
+    <div class="row mt-2">
+
+      <div class="col-md-6 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-map"></i>
+          <h3>{{ site.data.t.about.city[page.lang] }}</h3>
+          <p>{{ site.author.city }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-share-alt"></i>
+          <h3>{{ site.data.t.contact.social-profiles[page.lang]}}</h3>
+          <div class="social-links">
+            {% if site.author.twitter != "" %}
+            <a href="{{ site.author.twitter }}" class="twitter"><i class="bx bxl-twitter"></i></a>
+            {% endif %}
+            {% if site.author.facebook != "" %}
+            <a href="{{ site.author.facebook }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+            {% endif %}
+            {% if site.author.instagram != "" %}
+            <a href="{{ site.author.instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+            {% endif %}
+            {% if site.author.googleplus != "" %}
+            <a href="{{ site.author.googleplus }}" class="googleplus"><i class="bx bxl-googleplus"></i></a>
+            {% endif %}
+            {% if site.author.github != "" %}
+            <a href="{{ site.author.github }}" class="github"><i class="bx bxl-github"></i></a>
+            {% endif %}
+            {% if site.author.linkedin != "" %}
+            <a href="{{ site.author.linkedin }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-envelope"></i>
+          <h3>{{ site.data.t.about.email[page.lang] }}</h3>
+          <p>{{site.author.email}}</p>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-phone-call"></i>
+          <h3>{{ site.data.t.about.phone[page.lang] }}</h3>
+          <p>{{ site.author.phone }}</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="contact-form" action="{{site.author.contact-form-id}}" method="POST" class="php-email-form mt-4">
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input type="text" name="name" class="form-control" id="name" placeholder="{{ site.data.t.contact.your-name[page.lang] }}" required>
+        </div>
+        <div class="col-md-6 form-group">
+          <input type="email" class="form-control" name="email" id="email-address" placeholder="{{ site.data.t.contact.email[page.lang] }}" required>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="text" class="form-control" name="asunto" id="email-subject" placeholder="{{ site.data.t.contact.subject[page.lang] }}" required>
+      </div>
+      <div class="form-group mt-3">
+        <textarea class="form-control" name="message" rows="5" placeholder="{{ site.data.t.contact.message[page.lang] }}" required></textarea>
+      </div>
+      <div class="my-3">
+        <div class="loading">{{ site.data.t.contact.loading[page.lang] }}</div>
+        <div class="error-message" default='{{ site.data.t.contact.error-message[page.lang] }}'></div>
+        <div class="sent-message">{{ site.data.t.contact.sent-message[page.lang] }}</div>
+      </div>
+      <div class="text-center"><button type="submit">{{ site.data.t.contact.submit[page.lang] }}</button></div>
+    </form>
+
+  </div>
+</section><!-- End Contact Section -->

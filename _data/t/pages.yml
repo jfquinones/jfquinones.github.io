@@ -1,0 +1,49 @@
+# Menu translations
+home: 
+  en: Home
+  es: Principal
+about: 
+  en: About
+  es: Sobre mi
+resume: 
+  en: Resume
+  es: CV
+skills: 
+  en: Skills
+  es: Habilidades
+projects: 
+  en: Projects
+  es: Proyectos
+contact: 
+  en: Contact
+  es: Contacto
+skills-array:
+  en: "{\"array\": [\"Mechanical Engineer\",\"Industrial Automation and Control Designer\", \"Software Developer\",\"New Technologies Enthusiastic\"]}"
+  es: "{\"array\": [\"Ingeniero Mecanico\",\"Diseñador de Automatismos y Control Industrial\", \"Desarrollador de Software\", \"Entusiasta de las nuevas Tecnologias\"]}"
+
+
+#Resume Translations
+download-resume:
+  en: Donwload Resume
+  es: Descargar CV
+
+# Projects-Details translations
+project-information:
+  en: Project Information
+  es: Informacion del Proyecto
+project-description:
+  en: Description
+  es: Descripcion
+category:
+  en: Category
+  es: Categoria
+client:
+  en: Client
+  es: Cliente
+project-date:
+  en: Project Date
+  es: Fecha del Proyecto
+project-URL:
+  en: Project URL
+  es: Webpage
+
