@@ -21,7 +21,7 @@ body {
   color: var(--contrast-font);
   position: absolut;
   display: "flex";
-  background: transparent;
+  background: var(--background); 
 }
 
 /*body::before {
