@@ -19,9 +19,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--contrast-font);
-  position: absolut;
-  display: "flex";
-  background: var(--background); 
+  min-height: 100hv;
+  background: var(--background); 
 }
 
 /*body::before {
@@ -60,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
+  margin-top: 10rem;
   /*height: 100vh;*/
   display: flex;
   align-items: center;
@@ -167,6 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Show or hide dropdown menu items */
 .navbar .dropdown .dropdown-menu{ display: none; }
 .navbar .dropdown:hover .dropdown-menu{ display: block; }
+.navbar .dropdown .dropdown-item a{text-decoration: none;}
 
 .navbar {
   padding: 0;
@@ -240,18 +241,27 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Mobile Navigation 
 */
-.mobile-nav-toggle {
-  color: var(--contrast-font);
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
-  position: fixed;
-  right: 15px;
-  top: 15px;
-}
 
+
+
+.mobile-nav-toggle {
+  content: '';
+  color: var(--contrast-font);
+  background: var(--highlight);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;  
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -310,12 +320,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Top */
 #header.header-top {
-  height: 90px;
-  position: fixed;
+  margin-top: 0;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
+  height: 90px;
   z-index: 9999;
+  display: flex;
   /* background: var(--background); 
   background-image: linear-gradient(var(--highlight), var(--background));
   */
@@ -333,6 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header.header-top .container {
   display:flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -342,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #header.header-top {
-    height: 200px;
+    height: 60px;
   }
   #header.header-top h1 {
     font-size: 26px;
@@ -355,24 +368,30 @@ h1, h2, h3, h4, h5, h6 {
 section {
   overflow: hidden;
   position: absolute;
-  width: 100%;
   top: 140px;
-  bottom: 100%;
+  left:0;
+  right:0;
+  bottom: auto;
   opacity: 0;
   transition: ease-in-out 0.4s;
   z-index: 2;
 }
 
-section.section-show {
-  top: 70px;
+section.section-show {  
+  position: absolute;
+  top: 100px;
+  right: 0;
   bottom: auto;
+  left:0;
   opacity: 1;
   padding-bottom: 0px;
+  z-index: 100;
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0);
-  padding: 30px;
+
+  /* background: rgba(0, 0, 0, 0); */
+  padding: 0,30px,30px,30px;
 }
 
 @media (max-width: 768px) {
@@ -380,7 +399,7 @@ section .container {
     top: 120px;
   }
   section.section-show {
-    top: 80px;
+    top: 90px;
   }
 }
 
@@ -1283,53 +1302,7 @@ section .container {
   }
 }
 
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  font-size: 13px;
-  color: var(--contrast-font);
-  z-index: 1;
+footer{
+  display: flex;
+  margin-top: 1rem;
 }
-
-.credits a {
-  color: var(--highlight-light);
-  transition: 0.3s;
-}
-
-.credits a:hover {
-  color: var(--contrast-font);
-}
-
-@media (max-width: 992px) {
-  .credits {
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
-  }
-}
-
-#rain-effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 9999;
-  background: url('https://cdn.jsdelivr.net/gh/FacuQui/turing-rain-effect/matrix_bg.jpg') #000;
-  animation: rain 1s linear infinite;
-}
-
-#page-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9998;
-  border: none;
-}
-
