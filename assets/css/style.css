@@ -19,7 +19,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--contrast-font);
-  min-height: 100hv;
   background: var(--background); 
 }
 
@@ -90,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: var(--highlight);
 }
 
@@ -381,17 +381,18 @@ section.section-show {
 }
 
 section .container {
-
   /* background: rgba(0, 0, 0, 0); */
-  padding: 0,30px,30px,30px;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 @media (max-width: 768px) {
   section {
-    top: 120px;
+    top: 60px;
   }
   section.section-show {
-    top: 110px;
+    top: 60px;
   }
 }
 
