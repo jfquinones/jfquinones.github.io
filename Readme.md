@@ -48,7 +48,7 @@ This is a multilingual, responsive, modularized and easy-customizable portofolio
 
 ## Know Issues
 
-There is also a downloadable-resume to PDF file, it use an HTML2pdf javascript file, that can't process external CSS file so you have to manually change de style the downloadable-resume.html file. Another issue about this, is that automatically export HTML as A4 portrait pages, so the PDF maybe have rare looklike. 
+There is also a downloadable-resume to PDF file, it use an HTML2pdf javascript file, that can't process external CSS file so you have to manually change the style of the downloadable-resume.html file. Another issue about this, is that automatically export HTML as A4 portrait pages, so the PDF maybe have rare looklike. 
 
 
 
