@@ -43,8 +43,8 @@ This is a multilingual, responsive, modularized and easy-customizable portofolio
 ```
 
 - Almost all the content is in data folder, in which you have the translations for each section
- The layouts of the sections are in the includes folder
-- The main information about the autor is in config file, witch includes social-links and personal data
+- The layouts of the sections are in the includes folder
+- The main information about the autor is in _config.yml file, witch includes social-links and personal data
 
 ## Know Issues
 
