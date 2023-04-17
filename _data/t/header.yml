@@ -1,4 +1,4 @@
-# Menu translations
+# Menu(Navbar) translations
 home: 
   en: Home
   es: Principal
@@ -17,6 +17,8 @@ projects:
 contact: 
   en: Contact
   es: Contacto
+
+#Homepage Translations
 skills-array:
   en: "{\"array\": [\"Mechanical Engineer\",\"Industrial Automation and Control Designer\", \"Software Developer\",\"New Technologies Enthusiastic\"]}"
   es: "{\"array\": [\"Ingeniero Mecanico\",\"Diseñador de Automatismos y Control Industrial\", \"Desarrollador de Software\", \"Entusiasta de las nuevas Tecnologias\"]}"
@@ -24,28 +26,5 @@ i-am:
   en: I'm
   es: Soy
 
-#Resume Translations
-download-resume:
-  en: Donwload Resume
-  es: Descargar CV
 
-# Projects-Details translations
-project-information:
-  en: Project Information
-  es: Informacion del Proyecto
-project-description:
-  en: Description
-  es: Descripcion
-category:
-  en: Category
-  es: Categoria
-client:
-  en: Client
-  es: Cliente
-project-date:
-  en: Project Date
-  es: Fecha del Proyecto
-project-URL:
-  en: Project URL
-  es: Webpage
 

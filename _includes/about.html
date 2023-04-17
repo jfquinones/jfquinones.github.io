@@ -7,7 +7,7 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>{{ site.data.t.pages.about[page.lang] }}</h2>
+        <h2>{{ site.data.t.header.about[page.lang] }}</h2>
       </div>
 
       <div class="row">
@@ -40,7 +40,7 @@
               <div class="row">
                 
                 {% for interest in site.data.t.about.interests.list %}
-                <div class="col-lg-4 col-md-4 mt-4">
+                <div class="col-lg-4 col-md-4 mt-4 interest-item">
                   <div class="icon-box">
                     <i class="interest-icon {{ interest.icon }}"></i>
                     <h3>{{ interest.text[page.lang] }}</h3>

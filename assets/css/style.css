@@ -581,13 +581,36 @@ section .container {
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
-.interests .icon-box {
+.interests .interest-item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 3px; 
+}
+
+.interests .interest-item .icon-box{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  background: rgb(255,255,255,0.1);
+  transition: ease-in-out 0.3s;
+}
+/* .interests .icon-box {
   display: flex;
   align-items: center;
   padding: 20px;
   background: #09203a;
   transition: ease-in-out 0.3s;
-}
+} */
 
 
 .interests .icon-box i {
@@ -609,88 +632,6 @@ section .container {
   background: #042b56eb;
 }
 
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  min-height: 320px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
-  position: relative;
-  z-index: 2;
-  border: 6px solid rgba(255, 255, 255, 0.12);
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 45px;
-  color: var(--contrast-font);
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: #999;
-  margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 15px 0 15px;
-  padding: 20px 20px 60px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  position: relative;
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-}
-
-.testimonials .owl-nav, .testimonials .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-.testimonials .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.testimonials .owl-dot.active {
-  background-color: var(--highlight-light) !important;
-}
-
-@media (max-width: 767px) {
-  .testimonials {
-    margin: 30px 10px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Resume
@@ -759,88 +700,10 @@ section .container {
 #downloadable-resume-container{
   background: var(--background);
 }
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  background: #09203a;
-  padding: 40px 40px;
-  transition: all ease-in-out 0.3s;
-  margin: 10px
-}
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: var(--highlight-light);
-  border-radius: 5px;
-  transition: all .3s ease-out 0s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transform-style: preserve-3d;
-}
-
-.services .icon-box .icon i {
-  color: var(--contrast-font);
-  font-size: 28px;
-}
-
-.services .icon-box .icon::before {
-  position: absolute;
-  content: '';
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
-  transition: all .3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: var(--contrast-font);
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  background: #042e5f;
-  border-color: var(--highlight-light);
-}
-
-.services .icon-box:hover .icon {
-  background: var(--contrast-font);
-}
-
-.services .icon-box:hover .icon i {
-  color: var(--highlight-light);
-}
-
-.services .icon-box:hover .icon::before {
-  background: #35e888;
-}
-
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: var(--highlight);
-}
 
 /*--------------------------------------------------------------
-# Portfolio
+# Portfolio (Projects)
 --------------------------------------------------------------*/
 
 

@@ -4,19 +4,19 @@
     <div class="container">
 
       <h1><a href="">{{ site.author.name }}</a></h1>
-      <h2 style="color:#fff">{{ site.data.t.pages.i-am[page.lang] }} 
-        <span id="typing" class="typing" style="color:#A8DADC" my-array='{{ site.data.t.pages.skills-array[page.lang] }}'></span>
+      <h2 style="color:#fff">{{ site.data.t.header.i-am[page.lang] }} 
+        <span id="typing" class="typing" style="color:#A8DADC" my-array='{{ site.data.t.header.skills-array[page.lang] }}'></span>
       </h2>
       
      
       <nav id="navbar" class="navbar">
         <ul>
-          <li class="nav-item"><a class="nav-link active" href="#header">{{ site.data.t.pages.home[page.lang] }}</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">{{ site.data.t.pages.about[page.lang] }}</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resume">{{ site.data.t.pages.resume[page.lang] }}</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">{{ site.data.t.pages.skills[page.lang] }}</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">{{ site.data.t.pages.projects[page.lang] }}</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">{{ site.data.t.pages.contact[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#header">{{ site.data.t.header.home[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">{{ site.data.t.header.about[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">{{ site.data.t.header.resume[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">{{ site.data.t.header.skills[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">{{ site.data.t.header.projects[page.lang] }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">{{ site.data.t.header.contact[page.lang] }}</a></li>
           <!-- Language Choosen -->
           <li class="nav-item dropdown">
             {% for language in site.languages %}
