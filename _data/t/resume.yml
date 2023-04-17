@@ -8,16 +8,20 @@ sumary:
     en: Sumary
     es: Resumen
   items:
-    -title:
-      en: Facundo Quiñones
-      es: Facundo Quiñones
-    period: ""
-    place: 
-      en: ""
-      es: ""
-    description: 
-      en: hi I'm Facundo
-      es: hola soy Facundo
+    - title:
+        en: Facundo Quiñones
+        es: Facundo Quiñones
+      period: ""
+      place: 
+        en: ""
+        es: ""
+      description:
+        en: "I am a mechanical engineer passionate about using new technologies, both hardware and software,
+            to create tools to solve problems as they arise. I like to be self-taught and read a lot to keep myself up-to-date.
+            I love to work in teams, learn, share, and teach what I have learned"
+        es: "Soy un ingeniero mecánico apasionado por utilizar las nuevas tecnologias, tanto Hardware como Software, para 
+            crear herramientas para solucionar los problemas que se presenten. Me gusta ser autodidacta y leer mucho para mantenerme actualizado.
+            Me encanta trabajar en equipo, poder aprender, compartir y enseñar lo que he aprendido."
 
 education:
   title:
@@ -25,25 +29,48 @@ education:
     es: Educación
   items:
     - title:
-        en: 1st Education
-        es: 1era Educacion
-      period: 2004-2008
+        en: Bachelor's degree in Mechanical Engineering
+        es: Título de Grado en Ingeniería Mecánica
+      period: 2009-2017
       place: 
-        en: San
-        es: San
+        en: National University of San Juan
+        es: Universidad Nacional de San Juan
       description: 
-        en: 1st Education description
-        es: 1era Educacion descripcion
+        en: Degree in Mechanical Engineering with a focus on Mechatronics
+        es: Carrera en Ing. Mecánica con orientación en Mecatrónica
+
     - title:
-        en: 2nd Education
-        es: 2da Educacion
-      period: 2004-2008
+        en: English Level B2-First Certificate in English (FCE)
+        es: Ingles Nivel B2-First Certificate in English (FCE)
+      period: 2009
       place: 
-        en: San Juan
-        es: San Juan
+        en: Cambridge University
+        es: Universidad de Cambridge
       description: 
-        en: 2nd Education description
-        es: 2da Educacion descripcion
+        en: ""
+        es: ""
+    
+    - title: 
+        en: Artificial Vision Course (Coursera)
+        es: Curso de Visión Artificial (Coursera)
+      period: 2014
+      place: 
+        en: University of Barcelona
+        es: Universitat de Barcelona
+      description: 
+        en: ""
+        es: ""
+    
+    - title: 
+        en: Public Speaking Course
+        es: Curso de Oratoria
+      period: 2013
+      place: 
+        en: Cervantes Higher Institute
+        es: Instituto Superior Cervantes
+      description: 
+        en: Course to learn how to convey messages efficiently.
+        es: Curso para aprender a transmitir mensajes de una manera eficiente.
 
 experience:
   title:
@@ -51,24 +78,76 @@ experience:
     es: Experiencia
   items:
     - title:
-        en: 1st Experience
-        es: 1ra Experiencia
-      period: 2004-2008
+        en: Internship - Design of a Pelletizing Machine
+        es: Pasantía -  Diseño de una Máquina Peletizadora
+      period: 2016
       place: 
-        en: San
-        es: San
+        en: Research and Development Institute for Family Industry
+        es: Instituto de Investigación y Desarrollo para la Industria Familiar
       description:
-        en: 1st Work description
-        es: 1er Trabajo descripcion
+        en: Detailed design of a food pelletizing machine. Prototype testing, FEA software simulation
+          (Solidworks). Cloud co-working, drafting of blueprints
+        es: Diseño de detalle de una Máquina Peletizadora de Alimentos. Pruebas en prototipo, Simulación 
+          en Software FEA(Solidworks). Cloud Co-Working, Elaboración de Planos.
     - title:
-        en: 2nd Experience
-        es: 2da Experiencia
-      period: 2004-2008
+        en: Redesign of Control System for a Tensile Testing Machine
+        es: Rediseño de Sistema de Control para una Máquina de Ensayos de Tracción
+      period: 2017
       place: 
-        en: San Juan
-        es: San Juan
+        en: Institute of Applied Mechanics, National University of San Juan
+        es: Instituto de Mecánica Aplicada, Universidad Nacional de San Juan
       description:
-        en: 2nd Work description
-        es: 2do Trabajo descripcion
+        en: The control part was designed integrally using Arduino, Raspberry Pi, and electronic parts for the hardware.
+          On the other hand, Processing (Java) was used for the software.
+        es: Se diseño integralmente la parte de Control. Usando Arduino, Raspberry Pi, y Piezas de Electronicas para el Hardware.
+          Por otro lado Processing (Java) para el Software
+
+    - title:
+        en: Head of Mechanical Maintenance
+        es: Jefe de Mantenimiento Mecánico
+      period: 2018
+      place: 
+        en: Electrometalúrgica Andina
+        es: Electrometalúrgica Andina
+      description:
+        en: Responsible for mechanical maintenance of hydroelectric power plants, furnaces, crushers, filters, compressed air
+          network, industrial water treatment system, and vehicles
+        es: Encargado del Mantenimiento Mecánico de Centrales Hidroeléctricas, Hornos, Trituraciones, Filtros, Red de Aire
+          Comprimido, Sistema De Tratamiento de Aguas Industriales y Movilidades
+    
+    - title:
+        en: Short-Term Planner
+        es: Planificador de Corto Plazo 
+      period: 2019-2020
+      place: 
+        en: Veladero's Mine (Barrick and Shandong Gold)
+        es: Mina Veladero (Barrick y Shandong Gold)
+      description:
+        en: Programming of Preventive and Predictive Maintenance in process and crushing plant.
+        es: Programación de Mantenimiento Preventivo y Predictivo en planta de procesos y trituración
+
+    - title:
+        en: Head of Mechanical Maintenance
+        es: Jefe de Mantenimiento Mecánico
+      period: 2021-Today
+      place: 
+        en: Sidertec
+        es: Sidertec
+      description:
+        en: Responsible for mechanical maintenance of furnaces, crushers, filters, compressed air
+          network, and industrial water treatment system.
+        es: Encargado del Mantenimiento Mecánico de Hornos, Trituraciones, Filtros, Red de Aire
+          Comprimido, Sistema De Tratamiento de Aguas Industriales.
+
+    - title:
+        en: Industrial Automation and Control Manager
+        es: Encargado del Automatizacion y Control Industrial
+      period: 2022-Today
+      place: 
+        en: Sidertec
+        es: Sidertec
+      description:
+        en: Responsible for PLC and SCADA Design and Programming, Start-up, and Maintenance of Control System
+        es: Encargado del Diseño y Programacion PLC y SCADA, Puesta en Marcha y Mantenimiento del Sistema de Control. 
 
    

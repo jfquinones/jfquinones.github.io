@@ -160,13 +160,27 @@
    }); /* document Reay Function */
   }); /* End 'load' EventListener */
 
+
   /**
-   * Function to generate random color
-   * hsl(hue, saturation, lightness)
-   * hue: int between 0-360 if null a ramdom number will be generated
-   * saturation: int number between 0 and 100
-   * lightness: int number between 0 and 100
-   **/
+   * The function generates a random color in HSL format with customizable maximum and minimum values
+   * for hue, saturation, and lightness.
+   * @param [hueMaxVal=360] - The maximum value for the hue component of the generated color. It
+   * defaults to 360, which is the maximum value for the hue in the HSL color model (where hue values
+   * range from 0 to 360 degrees).
+   * @param [hueMinVal=0] - The minimum value for the hue component of the generated color. It is set
+   * to 0 by default, which corresponds to the color red in the HSL color model.
+   * @param [saturationMaxVal=100] - The maximum value for the saturation of the generated color, which
+   * is a number between 0 and 100.
+   * @param [saturationMinVal=0] - The minimum value for the saturation parameter in the HSL color
+   * model. It determines how intense or muted the color will be. A lower value will result in a more
+   * muted or grayish color, while a higher value will result in a more vibrant color.
+   * @param [lightnessMaxVal=100] - The maximum value for the lightness component of the generated
+   * color in the HSL color model. It determines how bright or dark the color can be.
+   * @param [lightnessMinVal=0] - The minimum value for the lightness parameter in the HSL color model.
+   * It determines the brightness of the color, with 0% being completely black and 100% being
+   * completely white.
+   * @returns a randomly generated color in HSL format.
+   */
   function generateRandomColor(hueMaxVal=360,hueMinVal=0,saturationMaxVal=100
           ,saturationMinVal=0,lightnessMaxVal=100,lightnessMinVal=0){
     
@@ -215,12 +229,21 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
-  
+/**
+ * The function loads an HTML file and converts it to a PDF format.
+ * @param filename - The name or path of the HTML file that needs to be downloaded.
+ */
   function loadHTML2Download(filename){
     fetch(filename)
     .then(response=> response.text())
     .then(text=> htmlFile2pdf(text))
   }
+
+/**
+ * The function converts an HTML file to a PDF file using the html2pdf library with specified options.
+ * @param element - The HTML element that needs to be converted to a PDF. This can be a DOM element or
+ * a selector string that identifies the element.
+ */
   function htmlFile2pdf(element) {
           var options = {
             jsPDF: {

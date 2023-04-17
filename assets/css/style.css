@@ -658,16 +658,26 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: var(--highlight-light);
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
+  font-size: 13px;
   background: rgba(255, 255, 255, 0.15);
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.resume .resume-item em {
+  color:var(--inactive-font);
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.resume .resume-item p {
+  margin-bottom: 0;
 }
 
 .resume .resume-item ul {

@@ -28,13 +28,13 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-      language: "es"
+      languages: es
   - scope:
       path: "en"
       type: "pages"
     values:
       layout: "default"
-      language: "en"
+      languages: en
 
 languages:
   - code: "en"
