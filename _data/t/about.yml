@@ -35,7 +35,7 @@ interests:
     - text:
         en: Machine Learning
         es: Aprendizaje Automatico
-      icon: ri-database-2-line
+      icon: bx bx-brain
     - text:
         en: Algorithms
         es: Algoritmos
@@ -43,8 +43,16 @@ interests:
     - text:
         en: Industrial Automation
         es: Automatizacion Industrial
-      icon: ri-database-2-line
+      icon: ri-sensor-line
     - text:
         en: Materials
         es: Materiales
-      icon: ri-database-2-line
+      icon: ri-stack-line
+    - text:
+        en: Maintenance
+        es: Mantenimiento
+      icon: ri-settings-5-line
+    - text:
+        en: Quality Assurance
+        es: Gestion de Calidad
+      icon: bx bx-check-shield

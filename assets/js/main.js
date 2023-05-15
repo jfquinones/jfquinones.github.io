@@ -245,15 +245,24 @@
  * a selector string that identifies the element.
  */
   function htmlFile2pdf(element) {
-          var options = {
+          const bodyEl = document.querySelector('body')
+          const backgroundColor = window.getComputedStyle(bodyEl).backgroundColor
+          var options = {            
             jsPDF: {
-              /* format: 'a4', */
-              orientation: 'portrait'
+              format: 'a4',
+              orientation: 'portrait',
+              unit: 'mm',
             },
-            html2canvas:  { letterRendering: true, useCORS: true, logging: true},
-            margin: 1,
+            html2canvas:  { 
+              letterRendering: true, 
+              useCORS: true,
+              logging: true,
+              backgroundColor: '#000000',
+            },
+            pagebreak: { mode: 'avoid-all', before: '#page2el' },
+            margin: 5,
             image: {type: 'jpeg', quality: 1},
-            filename: 'myfile.pdf',
+            filename: 'CV.pdf',
           };
 
           html2pdf().set(options).from(element).save();
