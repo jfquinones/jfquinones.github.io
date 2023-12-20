@@ -118,7 +118,7 @@ experience:
     - title:
         en: Short-Term Planner
         es: Planificador de Corto Plazo 
-      period: 2019-2020
+      period: 09/2019-01/2021
       place: 
         en: Veladero's Mine (Barrick and Shandong Gold)
         es: Mina Veladero (Barrick y Shandong Gold)
@@ -129,7 +129,7 @@ experience:
     - title:
         en: Head of Mechanical Maintenance
         es: Jefe de Mantenimiento Mecánico
-      period: 2021-Today
+      period: 02/2021-05/2023
       place: 
         en: Sidertec
         es: Sidertec
@@ -142,12 +142,25 @@ experience:
     - title:
         en: Industrial Automation and Control Manager
         es: Encargado del Automatizacion y Control Industrial
-      period: 2022-Today
+      period: 10/2021-05/2023
       place: 
         en: Sidertec
         es: Sidertec
       description:
         en: Responsible for PLC and SCADA Design and Programming, Start-up, and Maintenance of Control System
         es: Encargado del Diseño y Programacion PLC y SCADA, Puesta en Marcha y Mantenimiento del Sistema de Control. 
+    
+    - title:
+        en: Short-Term Planner
+        es: Planificador de Corto Plazo 
+      period: 06/2021-Today
+      place: 
+        en: Ceramica San Lorenzo
+        es: San Lorenzo Ceramics
+      description:
+        en: Programming of Preventive and Predictive Maintenance
+        es: Programación de Mantenimiento Preventivo y Predictivo
+
+    
 
    
