@@ -38,17 +38,6 @@ education:
       description: 
         en: Degree in Mechanical Engineering with a focus on Mechatronics
         es: Carrera en Ing. Mecánica con orientación en Mecatrónica
-
-    - title:
-        en: English Level B2-First Certificate in English (FCE)
-        es: Ingles Nivel B2-First Certificate in English (FCE)
-      period: 2009
-      place: 
-        en: Cambridge University
-        es: Universidad de Cambridge
-      description: 
-        en: ""
-        es: ""
     
     - title: 
         en: Artificial Vision Course (Coursera)
@@ -72,59 +61,54 @@ education:
         en: Course to learn how to convey messages efficiently.
         es: Curso para aprender a transmitir mensajes de una manera eficiente.
 
+    - title:
+        en: English Level B2-First Certificate in English (FCE)
+        es: Ingles Nivel B2-First Certificate in English (FCE)
+      period: 2009
+      place: 
+        en: Cambridge University
+        es: Universidad de Cambridge
+      description: 
+        en: ""
+        es: ""
+
 experience:
   title:
     en: Experience
     es: Experiencia
   items:
     - title:
-        en: Internship - Design of a Pelletizing Machine
-        es: Pasantía -  Diseño de una Máquina Peletizadora
-      period: 2016
-      place: 
-        en: Research and Development Institute for Family Industry
-        es: Instituto de Investigación y Desarrollo para la Industria Familiar
+        en: Maintenance Supervisor
+        es: Supervisor de Mantenimiento
+      period: 05/2025-Today
+      place:
+        en: San Lorenzo Ceramics 
+        es: Ceramica San Lorenzo        
       description:
-        en: Detailed design of a food pelletizing machine. Prototype testing, FEA software simulation
-          (Solidworks). Cloud co-working, drafting of blueprints
-        es: Diseño de detalle de una Máquina Peletizadora de Alimentos. Pruebas en prototipo, Simulación 
-          en Software FEA(Solidworks). Cloud Co-Working, Elaboración de Planos.
-    - title:
-        en: Redesign of Control System for a Tensile Testing Machine
-        es: Rediseño de Sistema de Control para una Máquina de Ensayos de Tracción
-      period: 2017
-      place: 
-        en: Institute of Applied Mechanics, National University of San Juan
-        es: Instituto de Mecánica Aplicada, Universidad Nacional de San Juan
-      description:
-        en: The control part was designed integrally using Arduino, Raspberry Pi, and electronic parts for the hardware.
-          On the other hand, Processing (Java) was used for the software.
-        es: Se diseño integralmente la parte de Control. Usando Arduino, Raspberry Pi, y Piezas de Electronicas para el Hardware.
-          Por otro lado Processing (Java) para el Software
-
-    - title:
-        en: Head of Mechanical Maintenance
-        es: Jefe de Mantenimiento Mecánico
-      period: 2018
-      place: 
-        en: Electrometalúrgica Andina
-        es: Electrometalúrgica Andina
-      description:
-        en: Responsible for mechanical maintenance of hydroelectric power plants, furnaces, crushers, filters, compressed air
-          network, industrial water treatment system, and vehicles
-        es: Encargado del Mantenimiento Mecánico de Centrales Hidroeléctricas, Hornos, Trituraciones, Filtros, Red de Aire
-          Comprimido, Sistema De Tratamiento de Aguas Industriales y Movilidades
-    
+        en: Supervisor of Preventive and Predictive Maintenance of Mills and Services
+        es: Supervisor de Mantenimiento Preventivo y Predictivo de Moliendas y Servicios
+  
     - title:
         en: Short-Term Planner
         es: Planificador de Corto Plazo 
-      period: 09/2019-01/2021
-      place: 
-        en: Veladero's Mine (Barrick and Shandong Gold)
-        es: Mina Veladero (Barrick y Shandong Gold)
+      period: 06/2023-05/2025
+      place:
+        en: San Lorenzo Ceramics 
+        es: Ceramica San Lorenzo        
       description:
-        en: Programming of Preventive and Predictive Maintenance in process and crushing plant.
-        es: Programación de Mantenimiento Preventivo y Predictivo en planta de procesos y trituración
+        en: Programming of Preventive and Predictive Maintenance
+        es: Programación de Mantenimiento Preventivo y Predictivo
+
+    - title:
+        en: Industrial Automation and Control Manager
+        es: Encargado del Automatizacion y Control Industrial
+      period: 10/2021-05/2023
+      place: 
+        en: Sidertec
+        es: Sidertec
+      description:
+        en: Responsible for PLC and SCADA Design and Programming, Start-up, and Maintenance of Control System
+        es: Encargado del Diseño y Programacion PLC y SCADA, Puesta en Marcha y Mantenimiento del Sistema de Control.    
 
     - title:
         en: Head of Mechanical Maintenance
@@ -140,26 +124,65 @@ experience:
           Comprimido, Sistema De Tratamiento de Aguas Industriales.
 
     - title:
-        en: Industrial Automation and Control Manager
-        es: Encargado del Automatizacion y Control Industrial
-      period: 10/2021-05/2023
-      place: 
-        en: Sidertec
-        es: Sidertec
-      description:
-        en: Responsible for PLC and SCADA Design and Programming, Start-up, and Maintenance of Control System
-        es: Encargado del Diseño y Programacion PLC y SCADA, Puesta en Marcha y Mantenimiento del Sistema de Control. 
-    
-    - title:
         en: Short-Term Planner
         es: Planificador de Corto Plazo 
-      period: 06/2021-Today
-      place:
-        en: San Lorenzo Ceramics 
-        es: Ceramica San Lorenzo        
+      period: 09/2019-01/2021
+      place: 
+        en: Veladero's Mine (Barrick and Shandong Gold)
+        es: Mina Veladero (Barrick y Shandong Gold)
       description:
-        en: Programming of Preventive and Predictive Maintenance
-        es: Programación de Mantenimiento Preventivo y Predictivo
+        en: Programming of Preventive and Predictive Maintenance in process and crushing plant.
+        es: Programación de Mantenimiento Preventivo y Predictivo en planta de procesos y trituración
+
+    - title:
+        en: Head of Mechanical Maintenance
+        es: Jefe de Mantenimiento Mecánico
+      period: 2018
+      place: 
+        en: Electrometalúrgica Andina
+        es: Electrometalúrgica Andina
+      description:
+        en: Responsible for mechanical maintenance of hydroelectric power plants, furnaces, crushers, filters, compressed air
+          network, industrial water treatment system, and vehicles
+        es: Encargado del Mantenimiento Mecánico de Centrales Hidroeléctricas, Hornos, Trituraciones, Filtros, Red de Aire
+          Comprimido, Sistema De Tratamiento de Aguas Industriales y Movilidades
+
+    - title:
+        en: Redesign of Control System for a Tensile Testing Machine
+        es: Rediseño de Sistema de Control para una Máquina de Ensayos de Tracción
+      period: 2017
+      place: 
+        en: Institute of Applied Mechanics, National University of San Juan
+        es: Instituto de Mecánica Aplicada, Universidad Nacional de San Juan
+      description:
+        en: The control part was designed integrally using Arduino, Raspberry Pi, and electronic parts for the hardware.
+          On the other hand, Processing (Java) was used for the software.
+        es: Se diseño integralmente la parte de Control. Usando Arduino, Raspberry Pi, y Piezas de Electronicas para el Hardware.
+          Por otro lado Processing (Java) para el Software
+        
+    - title:
+        en: Internship - Design of a Pelletizing Machine
+        es: Pasantía -  Diseño de una Máquina Peletizadora
+      period: 2016
+      place: 
+        en: Research and Development Institute for Family Industry
+        es: Instituto de Investigación y Desarrollo para la Industria Familiar
+      description:
+        en: Detailed design of a food pelletizing machine. Prototype testing, FEA software simulation
+          (Solidworks). Cloud co-working, drafting of blueprints
+        es: Diseño de detalle de una Máquina Peletizadora de Alimentos. Pruebas en prototipo, Simulación 
+          en Software FEA(Solidworks). Cloud Co-Working, Elaboración de Planos.
+
+
+
+    
+
+
+
+
+
+    
+
 
     
 
