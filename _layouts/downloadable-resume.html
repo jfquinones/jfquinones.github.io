@@ -194,6 +194,33 @@
       </div>
 
       <div class="row">
+        <!-- Education section -->
+          <h3 class="resume-title" prop1='{{ site.data.t.resume.education.title[page.lang] }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
+        <div class="col-left">
+          {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
+          {% for item in site.data.t.resume.education.items limit:half %}
+            <div class="resume-item">
+              <h4>{{ item.title[page.lang] }}</h4>
+              <h5>{{ item.period }}</h5>
+              <p><em>{{ item.place[page.lang] }}</em></p>
+              <p>{{ item.description[page.lang] }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      
+        <div class="col-right">
+          {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
+          {% for item in site.data.t.resume.education.items offset:half %}
+            <div class="resume-item">
+              <h4>{{ item.title[page.lang] }}</h4>
+              <h5>{{ item.period }}</h5>
+              <p><em>{{ item.place[page.lang] }}</em></p>
+              <p>{{ item.description[page.lang] }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row">
         <div class="col-lg-6">
           <!-- Education section -->
           <h3 class="resume-title" prop1='{{ site.data.t.resume.education.title[page.lang] }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
