@@ -148,10 +148,10 @@
       </div>
 
       <div class="row about-me">
-        <div class="col-lg-3" data-aos="fade-right">
+        <div class="col-lg-4" data-aos="fade-right">
           <img src="/assets/img/profile.png" class="img-fluid" alt="">
         </div>
-        <div class="col-lg-7 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <p>{{ site.data.t.about.description[page.lang] }}</p>
           <div class="row">
             <div class="col-lg-6">
@@ -226,34 +226,34 @@
             </div>
           {% endfor %}
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <!-- Education section -->
-          <h3 class="resume-title" prop1='{{ site.data.t.resume.education.title[page.lang] }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
-          {% for item in site.data.t.resume.education.items %}
-          <div class="resume-item">
-            <h4>{{ item.title[page.lang] }}</h4>
-            <h5>{{ item.period }}</h5>
-            <p><em>{{ item.place[page.lang] }}</em></p>
-            <p>{{ item.description[page.lang] }}</p>
-          </div>
-          {% endfor %}
-        </div>
-          <!-- Experience section -->
-        <div class="col-lg-6">
+      </div> <!-- End Education section -->
+      <div class="row">    
+          <!-- Experience section -->        
           <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.title[page.lang] }}'>{{ site.data.t.resume.experience.title[page.lang] }}</h3>
-          {% for item in site.data.t.resume.experience.items %}
+          <div class="col-left">
+          {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
+          {% for item in site.data.t.resume.experience.items limit:half %}
           <div class="resume-item" >
             <h4>{{ item.title[page.lang] }}</h4>
             <h5>{{ item.period }}</h5>
             <p><em>{{ item.place[page.lang] }}</em></p>
             <p>{{ item.description[page.lang] }}</p>
           </div>
-          {% endfor %}
-          
+          {% endfor %}          
+        </div>
+
+        <div class="col-right">
+        {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
+          {% for item in site.data.t.resume.experience.items offset:half %}
+          <div class="resume-item" >
+            <h4>{{ item.title[page.lang] }}</h4>
+            <h5>{{ item.period }}</h5>
+            <p><em>{{ item.place[page.lang] }}</em></p>
+            <p>{{ item.description[page.lang] }}</p>
+          </div>
+          {% endfor %}          
         </div>
       
-      </div>
+      </div> <!--End Experience section -->  
     </div><!-- End Resume -->
 
