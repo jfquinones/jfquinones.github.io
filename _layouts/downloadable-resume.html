@@ -74,7 +74,7 @@
 }
 
 .resume .resume-title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -90,7 +90,7 @@
 
 .resume .resume-item h4 {
   line-height: 18px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -99,7 +99,7 @@
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
+  font-size: 14px;
   background: rgba(0, 0, 0, 0.15);
   padding: 5px 15px;
   display: inline-block;
@@ -152,8 +152,9 @@
           <img src="/assets/img/profile.png" class="img-fluid" alt="">
         </div>
         <div class="col-right col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>{{ site.data.t.about.description[page.lang] }}</p>
-          <div class="row">
+          <p>{{ site.data.t.about.description[page.lang] }}</p>        
+        </div>
+        <div class="row">
             <div class="col-lg-6">
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
@@ -167,10 +168,7 @@
                 <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.email[page.lang] }}: </strong>{{ site.author.email }}</li>
               </ul>
             </div>
-
           </div>
-
-        </div>
       </div> <!-- End About me -->
 
       
