@@ -130,7 +130,7 @@
   background: var(--highlight-light);
   border: 2px solid var(--highlight-light);
 }
-  .row {
+  .row-2column {
   display: flex;
   gap: 20px;
 }
@@ -200,7 +200,7 @@
         <center><h2>{{ site.data.t.header.resume[page.lang] }}</h2></center>
       </div>
 
-      <div class="row">
+      <div class="row-2column">
         <!-- Education section -->
           <h3 class="resume-title" prop1='{{ site.data.t.resume.education.title[page.lang] }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
         <div class="col-left">
@@ -227,7 +227,7 @@
           {% endfor %}
         </div>
       </div> <!-- End Education section -->
-      <div class="row">    
+      <div class="row-2column">    
           <!-- Experience section -->        
           <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.title[page.lang] }}'>{{ site.data.t.resume.experience.title[page.lang] }}</h3>
           <div class="col-left">
