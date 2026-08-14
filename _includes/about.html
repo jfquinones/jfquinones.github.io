@@ -20,7 +20,17 @@
             <div class="col-lg-6">
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ site.author.age }}</li>
+                
+                {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+                {% assign birth_year = site.author.birthday | date: "%Y" | plus: 0 %}
+                {% assign age = current_year | minus: birth_year %}
+
+                {% assign current_month_day = "now" | date: "%m%d" | plus: 0 %}  
+                {% assign birth_month_day = site.author.birthday | date: "%m%d" | plus: 0 %}
+                {% if current_month_day < birth_month_day %}
+                  {% assign age = age | minus: 1 %}
+                {% endif %}
+                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ age }}</li>
                 <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.phone[page.lang] }}: </strong>{{ site.author.phone }}</li>
               </ul>
             </div>
