@@ -43,6 +43,9 @@ languages:
   - code: "es"
     name: "Español"
     path: "/es"
+  - code: "fr"
+    name: "French"
+    path: "/fr"
 
 exclude:
   - Gemfile
