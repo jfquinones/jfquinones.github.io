@@ -1,6 +1,6 @@
 ---
 lang: "en"
-languageName: "English"
+languageName: "Language"
 layout: "default"
 title: "Portfolio"
 ---
