@@ -19,17 +19,13 @@
           <li class="nav-item"><a class="nav-link" href="#contact">{{ site.data.t.header.contact[page.lang] }}</a></li>
           <!-- Language Choosen -->
           <li class="nav-item dropdown">
-            <!-- {% for language in site.languages %} -->
-            <!-- {% if page.language == language.code %} href="#"-->
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
               {{page.languageName}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!-- {% endif %}-->
-            <!-- {% endfor%} -->
   
             {% for language in site.languages %}
-            <!-- {% if page.language != language.code %} -->
+            <!-- {% if page.language != language.code %} data-toggle="dropdown"-->
             <a class="dropdown-item" href="{{ language.path }}" >{{language.name}}</a> 
             <!-- {% endif %} -->
             {% endfor %}
