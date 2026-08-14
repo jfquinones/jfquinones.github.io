@@ -18,23 +18,23 @@ year: "2023"
 
 defaults:
   - scope:
-      path: ""
+      path: "es"
       type: "pages"
     values:
       layout: "default"
-      language: "en"
+      language: "es"
   - scope:
       path: "es"
       type: "pages"
     values:
       layout: "default"
-      languages: es
+      languages: "es"
   - scope:
       path: "en"
       type: "pages"
     values:
       layout: "default"
-      languages: en
+      languages: "en"
 
 languages:
   - code: "en"
@@ -43,9 +43,9 @@ languages:
   - code: "es"
     name: "Español"
     path: "/es"
-  - code: "fr"
-    name: "French"
-    path: "/fr"
+  - code: "en"
+    name: "English"
+    path: "/en"
 
 exclude:
   - Gemfile
