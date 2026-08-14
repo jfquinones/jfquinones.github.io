@@ -37,9 +37,6 @@ defaults:
       languages: "en"
 
 languages:
-  - code: "en"
-    name: "English"
-    path: "/en"
   - code: "es"
     name: "Español"
     path: "/es"
