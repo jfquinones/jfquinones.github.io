@@ -259,14 +259,7 @@
                 <h4 class="mb-3">{{ category.title[page.lang] }}</h4>
                 <ul class="list-bullets">
                     {% for skill in category.skills %}
-                    {% if skill.icon != "" %}
-                    <div class="icon-box">
-                    <i class="skill-icon {{ skill.icon }}"></i>
-                    <li class="mb-1">{{ skill[page.lang] }}</li>
-                    </div>
-                    {% else %} 
-                    <li class="mb-1 without-icon">{{ skill[page.lang] }}</li>
-                    {% endif %}
+                     <li class="mb-1 without-icon">{{ skill[page.lang] }}</li>
                     {% endfor %}
                 </ul>
             </div>
