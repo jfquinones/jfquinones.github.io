@@ -20,15 +20,14 @@
           <!-- Language Choosen -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
-              {{page.languageName}}
+              {{ page.languageName }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
   
-            {% for language in site.languages %}
-            <!-- {% if page.language != language.code %} data-toggle="dropdown"-->
-            <a class="dropdown-item" href="{{ language.path }}" >{{language.name}}</a> 
-            <!-- {% endif %} -->
+            {% for language in site.languages %}              
+            <a class="dropdown-item" href="{{ language.path }}" >{{ language.name }}</a>             
             {% endfor %}
+              
             </div>
           </li>
         </ul>
