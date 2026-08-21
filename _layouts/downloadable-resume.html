@@ -171,9 +171,9 @@
       </div>
 
       <section class="sidebar-section">
-        <h3 class="sidebar-heading">{{ site.data.t.header.contact[language] | default: "Contacto" }}</h3>
+        <h3 class="sidebar-heading">{{ site.data.t.header.contact[page.lang] | default: "Contacto" }}</h3>
         <ul class="contact-list">
-          <li><strong>{{ site.data.t.about.city[language] }}</strong>{{ site.author.city }}</li>
+          <li><strong>{{ site.data.t.about.city[page.lang] }}</strong>{{ site.author.city }}</li>
           <li><strong>{{ site.data.t.about.phone[language] }}</strong>{{ site.author.phone }}</li>
           <li><strong>{{ site.data.t.about.email[language] }}</strong>{{ site.author.email }}</li>
           <li><strong>{{ site.data.t.about.birthday[language] }} / {{ site.data.t.about.age[language] }}</strong>{{ site.author.birthday }} ({{ age }})</li>

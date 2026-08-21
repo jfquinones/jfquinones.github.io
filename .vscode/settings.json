@@ -1,0 +1,4 @@
+{
+    "jekyll-run.commandLineArguments": "--trace --drafts --future --unpublished --livereload --incremental",
+    "jekyll-run.stopServerOnExit": true
+}
