@@ -1,274 +1,364 @@
-
 <style>
 :root {
   --background: #ffffff;
-  --highlight:#7d97c3;
-  --highlight-light: #676767;
-  --contrast-font: #000 ;
-  --inactive-font: #3F4042;
-  --underline: #24ff07;
+  --highlight: #2c3e50;      /* Azul marino oscuro, muy elegante para CVs impresos */
+  --highlight-light: #555555; 
+  --contrast-font: #222222;   
+  --inactive-font: #7f8c8d;   
+  --border-color: #bdc3c7;
 }
 
-.resume.container{
+/* Contenedor Principal */
+.resume.container {
   background: var(--background);
-  padding: 30px;
-}
-.about-me .img-fluid{
-  border-radius: 20%;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--contrast-font);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about-me .content h3 {
-  font-weight: 700;
-  font-size: 26px;
+/* Sección About Me */
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.about-me .img-fluid {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.about-me .content p {
+  line-height: 1.6;
   color: var(--highlight-light);
+  font-size: 15px;
+  text-align: justify;
 }
 
-.about-me .content ul {
+.about-me-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--highlight);
+}
+
+.about-me-details .col-details {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-me-details ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.about-me .content ul li {
+.about-me-details ul li {
   padding-bottom: 10px;
-}
-
-.about-me .content ul i {
-  font-size: 20px;
-  padding-right: 2px;
-  color: var(--highlight-light);
-}
-
-.about-me .content p:last-child {
-  margin-bottom: 0;
-}
-
-.interests.container{
-  margin-top: 20px;
-}
-.section-title h2 {
   font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 30px 0 20px 0;
+}
+
+.about-me-details ul strong {
+  color: var(--contrast-font);
+  margin-right: 5px;
+}
+
+/* Títulos de Sección */
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 18px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--inactive-font);
-  font-family: "Poppins", sans-serif;
-}
-.section-title h2::before {
-  content: "";
-  width: 120px;
-  height: 1px;
+  color: var(--highlight);
+  position: relative;
   display: inline-block;
-  background: var(--inactive-font);
-  margin: 4px 10px;
-}
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: var(--inactive-font);
-  margin: 4px 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--highlight);
 }
 
-.resume .resume-title {
-  font-size: 24px;
+/* Línea de Tiempo (Resume Items) */
+.resume-title {
+  font-size: 20px;
   font-weight: 700;
-  margin-top: 20px;
   margin-bottom: 20px;
   color: var(--contrast-font);
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 16px;
-  font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: var(--highlight-light);
-  margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
-  font-size: 14px;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 5px 15px;
+.resume-item {
+  padding: 0 0 25px 20px;
+  border-left: 2px solid var(--highlight);
+  position: relative;
+  page-break-inside: avoid; /* Evita que el item se corte a la mitad en el PDF */
+}
+
+.resume-item h4 {
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--contrast-font);
+  margin-bottom: 5px;
+}
+
+.resume-item h5 {
+  font-size: 12px;
+  background: #ecf0f1;
+  padding: 4px 10px;
   display: inline-block;
   font-weight: 600;
+  color: var(--highlight);
+  border-radius: 4px;
   margin-bottom: 10px;
 }
 
-.resume .resume-item ul {
-  padding-left: 20px;
+.resume-item p {
+  margin-bottom: 5px;
+  color: var(--highlight-light);
+  font-size: 13.5px;
+  line-height: 1.5;
 }
 
-.resume .resume-item ul li {
-  padding-bottom: 10px;
+.resume-item p em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--inactive-font);
 }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
+.resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  left: -8px;
   top: 0;
-  background: var(--highlight-light);
-  border: 2px solid var(--highlight-light);
+  background: #fff;
+  border: 2px solid var(--highlight);
 }
-  .row-2column {
+
+.resume-item:last-child {
+  border-left-color: transparent;
+}
+
+/* Layout de 2 Columnas */
+.row-2column {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .col-left, .col-right {
   flex: 1;
 }
+
+/* Tarjetas de Habilidades (Skills) */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-card {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  page-break-inside: avoid;
+}
+
+.skills-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--contrast-font);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.list-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-bullets li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  color: var(--highlight-light);
+}
+
+.list-bullets li::before {
+  content: "■"; /* Viñeta cuadrada más formal para CVs */
+  color: var(--highlight);
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+/* =============== OPTIMIZACIÓN PARA IMPRESIÓN/PDF =============== */
+@media print {
+  body {
+    background: #fff;
+  }
+  .resume.container {
+    padding: 0;
+    max-width: 100%;
+    box-shadow: none;
+  }
+  /* Fuerza a los navegadores a imprimir colores de fondo */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .row-2column {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .skills-card {
+    border: 1px solid #ccc;
+  }
+}
 </style>
-   
 
-    <div id="downloadable-resume-container" class="resume container">
-      
-      <!-- About me -->
-      <div class="section-title">
-        <center><h2>{{ site.data.t.header.about[page.lang] }}</h2></center>
+<div id="downloadable-resume-container" class="resume container">
+  
+  <!-- ====== ABOUT ME ====== -->
+  <div class="section-title">
+    <h2>{{ site.data.t.about.description[page.lang] | slice: 0, 0 }} {{ site.data.t.header.about[page.lang] | default: "Perfil" }}</h2>
+  </div>
+
+  <div class="about-me">
+    <img src="/assets/img/profile.png" class="img-fluid" alt="Juan Facundo Quiñones">
+    <div class="content">
+      <p>{{ site.data.t.about.description[page.lang] }}</p>        
+    </div>
+  </div>
+
+  <!-- Detalles de contacto agrupados -->
+  <div class="about-me-details">
+    <div class="col-details">
+      <ul>
+        <li><strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
+
+        <!-- Comienzo Calculo de la Edad -->
+        {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+        {% assign birth_year = site.author.birthday | date: "%Y" | plus: 0 %}
+        {% assign age = current_year | minus: birth_year %}
+
+        {% assign current_month_day = "now" | date: "%m%d" | plus: 0 %}  
+        {% assign birth_month_day = site.author.birthday | date: "%m%d" | plus: 0 %}
+        {% if current_month_day < birth_month_day %}
+          {% assign age = age | minus: 1 %}
+        {% endif %}
+        <!-- Fin Calculo de la Edad -->
+        
+        <li><strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ age }}</li>
+      </ul>
+    </div>
+    <div class="col-details">
+      <ul>
+        <li><strong>{{ site.data.t.about.phone[page.lang] }}: </strong>{{ site.author.phone }}</li>
+        <li><strong>{{ site.data.t.about.city[page.lang] }}: </strong> {{site.author.city }}</li>
+        <li><strong>{{ site.data.t.about.email[page.lang] }}: </strong>{{ site.author.email }}</li>
+      </ul>
+    </div>          
+  </div> 
+
+  <!-- ====== EDUCATION ====== -->
+  <div class="section-title">
+    <h2>{{ site.data.t.resume.education.title[page.lang] }}</h2>
+  </div>
+  
+  <div class="row-2column">
+    <div class="col-left">
+      {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
+      {% for item in site.data.t.resume.education.items limit:half %}
+        <div class="resume-item">
+          <h4>{{ item.title[page.lang] }}</h4>
+          <h5>{{ item.period }}</h5>
+          <p><em>{{ item.place[page.lang] }}</em></p>
+          <p>{{ item.description[page.lang] }}</p>
+        </div>
+      {% endfor %}
+    </div>      
+    <div class="col-right">
+      {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
+      {% for item in site.data.t.resume.education.items offset:half %}
+        <div class="resume-item">
+          <h4>{{ item.title[page.lang] }}</h4>
+          <h5>{{ item.period }}</h5>
+          <p><em>{{ item.place[page.lang] }}</em></p>
+          <p>{{ item.description[page.lang] }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div> 
+
+  <!-- ====== EXPERIENCE ====== -->
+  <div class="section-title">
+    <h2>{{ site.data.t.resume.experience.title[page.lang] }}</h2>
+  </div>
+
+  <div class="row-2column">
+    <div class="col-left">
+      {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
+      {% for item in site.data.t.resume.experience.items limit:half %}
+      <div class="resume-item">
+        <h4>{{ item.title[page.lang] }}</h4>
+        <h5>{{ item.period }}</h5>
+        <p><em>{{ item.place[page.lang] }}</em></p>
+        <p>{{ item.description[page.lang] }}</p>
       </div>
-
-      <div class="row about-me">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="/assets/img/profile.png" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>{{ site.data.t.about.description[page.lang] }}</p>        
-        </div>
-        </div>
-        <div class="row about-me mt-4">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.birthday[page.lang] }}: </strong>{{ site.author.birthday }}</li>
-
-                <!-- Comienzo Calculo de la Edad -->
-                {% assign current_year = "now" | date: "%Y" | plus: 0 %}
-                {% assign birth_year = site.author.birthday | date: "%Y" | plus: 0 %}
-                {% assign age = current_year | minus: birth_year %}
-
-                {% assign current_month_day = "now" | date: "%m%d" | plus: 0 %}  
-                {% assign birth_month_day = site.author.birthday | date: "%m%d" | plus: 0 %}
-                {% if current_month_day < birth_month_day %}
-                  {% assign age = age | minus: 1 %}
-                {% endif %}
-                <!-- Fin Calculo de la Edad. Variable de Salida: age -->
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.age[page.lang] }}: </strong>{{ age }}</li>
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.phone[page.lang] }}: </strong>{{ site.author.phone }}</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.city[page.lang] }}: </strong> {{site.author.city }}</li>
-                <li><i class="icofont-rounded-right"></i> <strong>{{ site.data.t.about.email[page.lang] }}: </strong>{{ site.author.email }}</li>
-              </ul>
-            </div>          
-        </div> <!-- End About me -->
-
-
-      <!-- Resume -->
-      <div class="section-title row mt-1">
-        <center><h2>{{ site.data.t.header.resume[page.lang] }}</h2></center>
-      </div>
-
-      <div class="row-2column row mt-1">
-        <!-- Education section -->
-          <h3 class="resume-title" prop1='{{ site.data.t.resume.education.title[page.lang] }}'>{{ site.data.t.resume.education.title[page.lang] }}</h3>
-        <div class="col-left">
-          {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
-          {% for item in site.data.t.resume.education.items limit:half %}
-            <div class="resume-item">
-              <h4>{{ item.title[page.lang] }}</h4>
-              <h5>{{ item.period }}</h5>
-              <p><em>{{ item.place[page.lang] }}</em></p>
-              <p>{{ item.description[page.lang] }}</p>
-            </div>
-          {% endfor %}
-        </div>      
-        <div class="col-right">
-          {% assign half = site.data.t.resume.education.items.size | divided_by: 2 | ceil %}
-          {% for item in site.data.t.resume.education.items offset:half %}
-            <div class="resume-item">
-              <h4>{{ item.title[page.lang] }}</h4>
-              <h5>{{ item.period }}</h5>
-              <p><em>{{ item.place[page.lang] }}</em></p>
-              <p>{{ item.description[page.lang] }}</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div> <!-- End Education section -->
-      
-      <div class="row-2column row mt-3">    
-          <!-- Experience section -->        
-          <h3 class="resume-title" prop1='{{ site.data.t.resume.experience.title[page.lang] }}'>{{ site.data.t.resume.experience.title[page.lang] }}</h3>
-          <div class="col-left">
-          {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
-          {% for item in site.data.t.resume.experience.items limit:half %}
-          <div class="resume-item" >
-            <h4>{{ item.title[page.lang] }}</h4>
-            <h5>{{ item.period }}</h5>
-            <p><em>{{ item.place[page.lang] }}</em></p>
-            <p>{{ item.description[page.lang] }}</p>
-          </div>
-          {% endfor %}          
-        </div>
-
-        <div class="col-right">
-        {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
-          {% for item in site.data.t.resume.experience.items offset:half %}
-          <div class="resume-item" >
-            <h4>{{ item.title[page.lang] }}</h4>
-            <h5>{{ item.period }}</h5>
-            <p><em>{{ item.place[page.lang] }}</em></p>
-            <p>{{ item.description[page.lang] }}</p>
-          </div>
-          {% endfor %}          
-        </div>      
-      </div> <!--End Experience section -->  
-
-  <!-- Start Skills Section -->
-
-  <div class="container">
-      <div class="section-title">
-        <h2>{{ site.data.t.header.skills[page.lang]}}</h2>
-      </div>
-
-      <div class="row py-2">
-        {% for category in site.data.t.skills.categories %}
-        <div class="col-lg-10 mx-auto">
-          <div class="card shadow mb-1">
-            <div class="card-body p-1">
-                <h4 class="mb-3">{{ category.title[page.lang] }}</h4>
-                <ul class="list-bullets">
-                    {% for skill in category.skills %}
-                      <li class="mb-1 without-icon">{{ skill[page.lang] }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-          </div>
-        </div>  
-        {% endfor %}
-      </div>  
+      {% endfor %}          
     </div>
 
-  <!-- End Skills Section -->
- </div><!-- End Resume -->
+    <div class="col-right">
+      {% assign half = site.data.t.resume.experience.items.size | divided_by: 2 | ceil %}
+      {% for item in site.data.t.resume.experience.items offset:half %}
+      <div class="resume-item">
+        <h4>{{ item.title[page.lang] }}</h4>
+        <h5>{{ item.period }}</h5>
+        <p><em>{{ item.place[page.lang] }}</em></p>
+        <p>{{ item.description[page.lang] }}</p>
+      </div>
+      {% endfor %}          
+    </div>      
+  </div>
 
+  <!-- ====== SKILLS ====== -->
+  <div class="section-title">
+    <h2>{{ site.data.t.header.skills[page.lang] | default: "Skills" }}</h2>
+  </div>
+
+  <div class="skills-grid"> 
+    {% for category in site.data.t.skills.categories %}
+    <div class="skills-card">
+      <h4>{{ category.title[page.lang] }}</h4>
+      <ul class="list-bullets">
+          {% for skill in category.skills %}
+            <li>{{ skill[page.lang] }}</li>
+          {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>  
+
+</div><!-- End Container -->
