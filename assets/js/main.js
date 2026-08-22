@@ -260,7 +260,7 @@
               backgroundColor: '#000000',
             },
             pagebreak: { mode: 'avoid-all', before: '#page2el' },
-            margin: 5,
+            margin: 0,
             image: {type: 'jpeg', quality: 1},
             filename: 'CV.pdf',
           };

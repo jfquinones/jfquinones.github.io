@@ -1,4 +1,13 @@
 {
     "jekyll-run.commandLineArguments": "--trace --drafts --future --unpublished --livereload --incremental",
-    "jekyll-run.stopServerOnExit": true
+    "jekyll-run.stopServerOnExit": true,
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml",
+        "file:///home/facu/Documentos/cv/jfquinones.github.io/_data/t/resume.yml"
+    ]
 }

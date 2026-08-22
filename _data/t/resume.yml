@@ -1,11 +1,11 @@
 #Resume Translations
 download-resume:
   en: Download Resume
-  es: Descargar CV
+  es: Descargar Curriculum
    
-sumary:
+summary:
   title:
-    en: Sumary
+    en: Summary
     es: Resumen
   items:
     - title:
@@ -16,10 +16,10 @@ sumary:
         en: ""
         es: ""
       description:
-        en: "I am a mechanical engineer passionate about using new technologies, both hardware and software,
+        en: "Mechanical engineer passionate about using new technologies, both hardware and software,
             to create tools to solve problems as they arise. I like to be self-taught and read a lot to keep myself up-to-date.
             I love to work in teams, learn, share, and teach what I have learned"
-        es: "Soy un ingeniero mecánico apasionado por utilizar las nuevas tecnologias, tanto Hardware como Software, para 
+        es: "Ingeniero mecánico apasionado por utilizar las nuevas tecnologias, tanto Hardware como Software, para 
             crear herramientas para solucionar los problemas que se presenten. Me gusta ser autodidacta y leer mucho para mantenerme actualizado.
             Me encanta trabajar en equipo, poder aprender, compartir y enseñar lo que he aprendido."
 

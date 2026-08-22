@@ -1,49 +1,38 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: 'es' }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.author.name }} | CV</title>
+
   <style>
     @page { size: A4; margin: 0; }
     :root {
-      --ink: #17212b;
-      --muted: #64717d;
-      --soft: #eef3f5;
-      --line: #d7e0e4;
-      --accent: #0f766e;
-      --accent-dark: #115e59;
-      --sidebar: #17343b;
-      --sidebar-ink: #e8f1f1;
-      --sidebar-muted: #b9cdce;
+      --ink: #0f172a;
+      --muted: #475569;
+      --soft: #f1f5f9;
+      --line: #cbd5e1;
+      --accent: #0284c7;
+      --accent-dark: #0369a1;
+      --sidebar: #1e293b;
+      --sidebar-ink: #f8fafc;
+      --sidebar-muted: #cbd5e1;
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #dfe7e8; }
-    body {
-      color: var(--ink);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 9.2pt;
-      line-height: 1.4;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { margin: 0; padding: 0; background: #fff; }
+    body { color: var(--ink); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5pt; line-height: 1.4; }
     .cv-page {
       display: grid;
-      grid-template-columns: 31% 69%;
+      grid-template-columns: 32% 68%;
       width: 210mm;
       min-height: 297mm;
-      margin: 18px auto;
+      margin: 0 auto;
       overflow: hidden;
       background: #fff;
-      box-shadow: 0 12px 36px rgba(23, 52, 59, .18);
     }
-    .sidebar { padding: 28px 20px; color: var(--sidebar-ink); background: var(--sidebar); }
-    .profile { padding-bottom: 20px; text-align: center; border-bottom: 1px solid rgba(232, 241, 241, .22); }
+    .sidebar { padding: 24px 18px; color: var(--sidebar-ink); background: var(--sidebar); }
+    .profile { text-align: center; }
     .profile-photo {
       display: block;
-      width: 104px;
-      height: 104px;
-      margin: 0 auto 14px;
+      width: 190px;
+      height: 190px;
+      margin: 0 auto;
       object-fit: cover;
-      border: 3px solid #6ec5bc;
+      border: 3px solid #38bdf8;
       border-radius: 50%;
     }
     .profile-name { margin: 0; font-size: 15pt; line-height: 1.15; letter-spacing: .3px; }
@@ -59,33 +48,35 @@
     .sidebar-section { margin-top: 20px; }
     .sidebar-heading {
       margin: 0 0 10px;
-      color: #8dd3ca;
-      font-size: 8.4pt;
+      padding-bottom: 4px;
+      color: #38bdf8;
+      border-bottom: 1px solid #334155;
+      font-size: 11pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
     }
     .contact-list, .skill-list { margin: 0; padding: 0; list-style: none; }
     .contact-list li {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
       color: var(--sidebar-muted);
-      font-size: 8.1pt;
-      overflow-wrap: anywhere;
+      font-size: 8.5pt;
+      word-break: break-all;
     }
     .contact-list strong {
       display: block;
-      margin-bottom: 1px;
       color: var(--sidebar-ink);
-      font-size: 7.2pt;
+      font-size: 8pt;
       text-transform: uppercase;
-      letter-spacing: .6px;
+      letter-spacing: .5px;
     }
-    .skill-group { margin-bottom: 13px; }
-    .skill-group-title { margin-bottom: 5px; color: var(--sidebar-muted); font-size: 8pt; font-weight: 700; }
-    .skill-list li { position: relative; margin: 0 0 5px; padding-left: 11px; color: var(--sidebar-ink); font-size: 8.1pt; }
-    .skill-list li::before { position: absolute; top: 0; left: 0; color: #6ec5bc; content: "•"; }
-    .main { padding: 30px 28px 26px; }
-    .intro { padding-bottom: 17px; border-bottom: 3px solid var(--accent); }
+    .skill-group { margin-bottom: 12px; }
+    .skill-group-title { margin-bottom: 5px; color: #94a3b8; font-size: 9pt; font-weight: 600; }
+    .skill-list { line-height: 1.8; }
+    .skill-list li { display: inline-block; margin: 0 4px 4px 0; padding: 2px 7px; color: #f1f5f9; background: #334155; border-radius: 3px; font-size: 8pt; font-weight: 500; }
+    .skill-list li:nth-child(-n+2) { color: #fff; background: #0284c7; }
+    .main { padding: 24px 24px 24px 22px; }
+    .intro { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--accent); }
     .eyebrow {
       margin: 0 0 5px;
       color: var(--accent);
@@ -94,55 +85,44 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
-    .intro h1 { margin: 0; color: var(--ink); font-size: 25pt; line-height: 1; letter-spacing: -.4px; }
-    .intro-role { margin: 8px 0 14px; color: var(--muted); font-size: 10.5pt; font-weight: 600; }
-    .summary { margin: 0; color: #485761; font-size: 9pt; line-height: 1.5; }
-    .section { margin-top: 20px; }
+    .intro h1 { color: var(--ink); font-size: 20pt; font-weight: 800; line-height: 1.1; text-transform: uppercase; letter-spacing: .5px; }
+    .intro-role { margin-top: 4px; color: var(--accent); font-size: 11pt; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .summary { margin: 16px 0 0; color: var(--muted); font-size: 9pt; line-height: 1.45; text-align: justify; }
+    .section { margin-top: 14px; }
     .section-heading {
       display: flex;
       align-items: center;
       gap: 10px;
       margin: 0 0 12px;
       color: var(--ink);
-      font-size: 10.5pt;
-      font-weight: 800;
+      font-size: 11pt;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: .8px;
     }
     .section-heading::after { height: 1px; flex: 1; background: var(--line); content: ""; }
     .resume-item {
       position: relative;
-      margin: 0 0 14px;
-      padding: 0 0 0 15px;
-      border-left: 2px solid #b8d9d5;
+      margin: 0 0 11px;
       page-break-inside: avoid;
     }
-    .resume-item::before {
-      position: absolute;
-      top: 2px;
-      left: -5px;
-      width: 7px;
-      height: 7px;
-      border: 2px solid var(--accent);
-      border-radius: 50%;
-      background: #fff;
-      content: "";
-    }
-    .item-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-    .item-title { margin: 0; color: var(--ink); font-size: 9.4pt; font-weight: 800; line-height: 1.25; }
+    #downloadable-resume-container .resume-item::before { display: none; content: none; }
+    .item-top { margin-bottom: 0px; }
+    .item-title { display: inline; color: var(--ink); font-size: 9.5pt; font-weight: 700; line-height: 1.25; }
     .item-period {
-      flex: 0 0 auto;
-      padding: 2px 6px;
-      color: var(--accent-dark);
+      float: right;
+      padding: 1px 6px;
+      color: #64748b;
       background: var(--soft);
       border-radius: 3px;
-      font-size: 7.6pt;
-      font-weight: 700;
+      font-size: 8pt;
+      font-weight: 600;
       white-space: nowrap;
     }
-    .item-place { margin: 3px 0; color: var(--accent-dark); font-size: 8.4pt; font-weight: 700; }
-    .item-description { margin: 0; color: var(--muted); font-size: 8.5pt; line-height: 1.4; }
-    @media print {
+    .item-place { margin: 3px 0; color: var(--accent); font-size: 9pt; font-weight: 600; }
+    .item-description { margin: 2px 0 0; color: #334155; font-size: 8.5pt; line-height: 1.35; }
+    .item-top::after { display: block; clear: both; content: ""; }
+     @media print {
       html, body { background: #fff; }
       .cv-page { width: 210mm; min-height: 297mm; margin: 0; box-shadow: none; }
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
@@ -150,10 +130,10 @@
     @media screen and (max-width: 800px) {
       .cv-page { display: block; width: 100%; min-height: 0; margin: 0; }
       .sidebar, .main { padding: 24px; }
-    }
+    } 
   </style>
-</head>
-<body>
+
+  <div id="downloadable-resume-container" class="resume">
   {% assign language = page.lang | default: 'es' %}
   {% assign current_year = "now" | date: "%Y" | plus: 0 %}
   {% assign birth_year = site.author.birthday | date: "%Y" | plus: 0 %}
@@ -163,26 +143,27 @@
   {% if current_month_day < birth_month_day %}{% assign age = age | minus: 1 %}{% endif %}
 
   <div class="cv-page">
-    <aside class="sidebar">
+    <div class="sidebar">
       <div class="profile">
         <img src="/assets/img/profile.png" class="profile-photo" alt="{{ site.author.name }}">
-        <h2 class="profile-name">{{ site.author.name }}</h2>
-        <p class="profile-role">{% if language == 'en' %}Mechanical Engineer<br>Mechatronics Focus{% else %}Ingeniero Mecánico<br>Orientación Mecatrónica{% endif %}</p>
+        <!-- <h2 class="profile-name">{{ site.author.name }}</h2>
+        <p class="profile-role">{% if language == 'en' %}Mechanical Engineer<br>Mechatronics Focus{% else %}Ingeniero Mecánico<br>Orientación Mecatrónica{% endif %}</p> -->
       </div>
 
-      <section class="sidebar-section">
+      <div class="sidebar-section">
         <h3 class="sidebar-heading">{{ site.data.t.header.contact[page.lang] | default: "Contacto" }}</h3>
         <ul class="contact-list">
-          <li><strong>{{ site.data.t.about.city[page.lang] }}</strong>{{ site.author.city }}</li>
+          <li><strong>{{ site.data.t.about.city[language] }}</strong>{{ site.author.city }}</li>
           <li><strong>{{ site.data.t.about.phone[language] }}</strong>{{ site.author.phone }}</li>
           <li><strong>{{ site.data.t.about.email[language] }}</strong>{{ site.author.email }}</li>
           <li><strong>{{ site.data.t.about.birthday[language] }} / {{ site.data.t.about.age[language] }}</strong>{{ site.author.birthday }} ({{ age }})</li>
           <li><strong>LinkedIn</strong>{{ site.author.linkedin | remove: "https://www.linkedin.com/in/" | remove: "/" }}</li>
           <li><strong>GitHub</strong>{{ site.author.github | remove: "https://www.github.com/" | remove: "/" }}</li>
         </ul>
-      </section>
+      </div>
 
-      <section class="sidebar-section">
+      <!-- Skills Section -->
+      <div class="sidebar-section">
         <h3 class="sidebar-heading">{{ site.data.t.header.skills[language] | default: "Skills" }}</h3>
         {% for category in site.data.t.skills.categories %}
           <div class="skill-group">
@@ -192,39 +173,41 @@
             </ul>
           </div>
         {% endfor %}
-      </section>
-    </aside>
+      </div>
+    </div> <!-- End Sidebar -->
 
-    <main class="main">
-      <header class="intro">
-        <p class="eyebrow">{{ site.data.t.header.resume[language] | default: "Curriculum Vitae" }}</p>
+    <div class="main">
+      <div class="intro">
         <h1>{{ site.author.name }}</h1>
         <p class="intro-role">{% if language == 'en' %}Mechanical Engineer | Industrial Automation and Control{% else %}Ingeniero Mecánico | Automatización y Control Industrial{% endif %}</p>
         <p class="summary">{{ site.data.t.about.description[language] }}</p>
-      </header>
+      </div>
 
-      <section class="section">
+      <!--Experience-->
+      <div class="section">
         <h2 class="section-heading">{{ site.data.t.resume.experience.title[language] }}</h2>
         {% for item in site.data.t.resume.experience.items %}
-          <article class="resume-item">
+          <div class="resume-item">
             <div class="item-top"><h3 class="item-title">{{ item.title[language] }}</h3><span class="item-period">{{ item.period }}</span></div>
             <p class="item-place">{{ item.place[language] }}</p>
             <p class="item-description">{{ item.description[language] }}</p>
-          </article>
+          </div>
         {% endfor %}
-      </section>
+      </div>
 
-      <section class="section">
+
+      <!--Education-->
+      <div class="section">
         <h2 class="section-heading">{{ site.data.t.resume.education.title[language] }}</h2>
         {% for item in site.data.t.resume.education.items %}
-          <article class="resume-item">
+          <div class="resume-item">
             <div class="item-top"><h3 class="item-title">{{ item.title[language] }}</h3><span class="item-period">{{ item.period }}</span></div>
             <p class="item-place">{{ item.place[language] }}</p>
             {% if item.description[language] != "" %}<p class="item-description">{{ item.description[language] }}</p>{% endif %}
-          </article>
+          </div>
         {% endfor %}
-      </section>
-    </main>
-  </div>
-</body>
-</html>
+      </div>
+    </div> <!-- End Main -->
+
+  </div> <!-- End cv-page -->
+  </div> <!-- End Container-->
